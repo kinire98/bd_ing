@@ -13,7 +13,6 @@ for i in lista1:
     
 print(final)
 ```
-![](./ejercicio16.py)
 ## Ejercicio 17
 ```python
 lista = [1 , 23, 423,45, 5,5,23,42,5,54,4,24,42,24,3]
