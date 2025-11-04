@@ -79,3 +79,10 @@ input()
 while procesar_pedido():
     pass
 ```
+![Salida ejecucion](./img/listas/salida.png)
+
+## Redis insight
+![](./img/listas/1.png)
+![](./img/listas/2.png)
+![](./img/listas/3.png)
+![](./img/listas/4.png)
