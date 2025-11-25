@@ -1,3 +1,4 @@
 # Unidad 2
-[Redis](./redis)
+[Redis](./redis)  
+[InfluxDB](./influxdb/)
 
