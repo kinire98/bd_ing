@@ -1,7 +1,8 @@
-from influxdb_client.client.write_api import SYNCHRONOUS
+from influxdb_client.client.write_api import ASYNCHRONOUS
 from influxdb_client.client.influxdb_client import InfluxDBClient
 from influxdb_client.client.exceptions import InfluxDBError
 from influxdb_client.client.write.point import Point
+from influxdb_client.client.write_api import WriteOptions
 from urllib3.exceptions import NewConnectionError
 import psutil
 import socket
@@ -26,7 +27,7 @@ def metricas_sistema():
             "disk_percent": disk_usage,
             }
 def insert(pc_data, write_api):
-        p = Point("temperatura_medicion")\
+        p = Point("medicion_pc")\
             .tag("metrics", "pc")\
             .field("host", pc_data["host"])\
             .field("cpu_percent", pc_data["cpu_percent"])\
@@ -47,7 +48,12 @@ try:
     if client.health().status == "pass":
         print("[INFO] Exito")
         print(f"Version: {client.version}")
-        write_api = client.write_api(write_options=SYNCHRONOUS)
+        options = WriteOptions(
+            batch_size=500,
+            flush_interval=1000,
+            write_type=ASYNCHRONOUS
+            )
+        write_api = client.write_api(write_options=options)
         while True:
             insert(metricas_sistema(), write_api)
     else:
@@ -56,6 +62,8 @@ try:
 except (InfluxDBError, NewConnectionError) as e:
     print("[ERROR] Error al conectar con INfluxDB: ")
     print(f"    Detalle: {e}")
+except  KeyboardInterrupt as key:
+    print("Operacion finalizada por usuario")
 finally:
     if client: # pyright: ignore
         client.close()
