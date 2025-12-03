@@ -6,7 +6,6 @@ def extract_data(file_name: str) -> list[tuple[int, str, str, datetime, float, f
     content = content.split("\n")
     for i in range(1, len(content) - 1):
         row_content = content[i].split(",")
-        print(row_content)
         dt = datetime.strptime(row_content[3], "%Y-%m-%d %H:%M:%S")
         dt_utc = dt.replace(tzinfo=timezone.utc)
         time_date = dt_utc.isoformat().replace('+00:00', "Z")

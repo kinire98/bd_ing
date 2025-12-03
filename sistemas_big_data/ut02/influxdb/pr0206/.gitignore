@@ -1,1 +1,2 @@
-./datasets/*.csv
+*.csv
+__pycache__/
