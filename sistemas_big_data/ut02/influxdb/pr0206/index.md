@@ -123,3 +123,9 @@ def _insert_date(data: dict[str, Any], write_api: WriteApi) -> bool:
         return False
 
 ```
+
+
+## Elementos insertados
+![](./img/inserted.png)
+## Gráfico con Elementos
+![](./img/graphic.png)
