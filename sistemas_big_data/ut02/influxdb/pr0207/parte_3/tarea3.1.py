@@ -1,4 +1,4 @@
-import re
+
 from influxdb_client.client.influxdb_client import InfluxDBClient
 
 
@@ -33,4 +33,5 @@ result = query_api.query(QUERY)
 for table in result:
     for record in table.records:
         print("Day: ", record["_time"].date())
-        print("\tPercent changed: ", str(record["difference"]) + "%")
+        print("\tPercent changed: ", "{0:.2f}".format(record["difference"]) + "%")
+
