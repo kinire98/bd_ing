@@ -1,14 +1,10 @@
 # PR0404: Aplicación de patrones MapReduce
 
-[_Descargar cuaderno_](./pr0404.ipynb)
 
 ```python
 !hdfs dfs -mkdir /gdp
 !hdfs dfs -put ./pr0404/countries_gdp_hist.csv /gdp
 ```
-
-    mkdir: `/gdp': File exists
-
 
 
 ```python
@@ -16,7 +12,7 @@
 ```
 
     Found 1 items
-    -rw-r--r--   3 root supergroup    1658937 2025-12-18 09:18 /gdp/countries_gdp_hist.csv
+    -rw-r--r--   3 root supergroup    1658937 2026-01-07 16:12 /gdp/countries_gdp_hist.csv
 
 
 ## Ejercicio 1: Limpieza y transformación
@@ -69,7 +65,7 @@ for line in sys.stdin:
     print(line)
 ```
 
-    Writing pr0404/ejercicio1/reducer-gdp.py
+    Overwriting pr0404/ejercicio1/reducer-gdp.py
 
 
 
@@ -10061,26 +10057,27 @@ for line in sys.stdin:
 ```
 
     rm: `/processed/country_gdp/*': No such file or directory
-    2025-12-18 09:28:30,250 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
-    packageJobJar: [pr0404/ejercicio1/mapper-gdp.py, pr0404/ejercicio1/reducer-gdp.py, /tmp/hadoop-unjar7435796241443121094/] [] /tmp/streamjob6649821022205143726.jar tmpDir=null
-    2025-12-18 09:28:31,543 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.5:8032
-    2025-12-18 09:28:31,731 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.5:8032
-    2025-12-18 09:28:32,070 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1766048350482_0003
-    2025-12-18 09:28:32,768 INFO mapred.FileInputFormat: Total input files to process : 1
-    2025-12-18 09:28:32,951 INFO mapreduce.JobSubmitter: number of splits:2
-    2025-12-18 09:28:33,227 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1766048350482_0003
-    2025-12-18 09:28:33,228 INFO mapreduce.JobSubmitter: Executing with tokens: []
-    2025-12-18 09:28:33,560 INFO conf.Configuration: resource-types.xml not found
-    2025-12-18 09:28:33,561 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
-    2025-12-18 09:28:33,694 INFO impl.YarnClientImpl: Submitted application application_1766048350482_0003
-    2025-12-18 09:28:33,743 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1766048350482_0003/
-    2025-12-18 09:28:33,745 INFO mapreduce.Job: Running job: job_1766048350482_0003
-    2025-12-18 09:28:42,127 INFO mapreduce.Job: Job job_1766048350482_0003 running in uber mode : false
-    2025-12-18 09:28:42,128 INFO mapreduce.Job:  map 0% reduce 0%
-    2025-12-18 09:28:48,281 INFO mapreduce.Job:  map 100% reduce 0%
-    2025-12-18 09:28:56,387 INFO mapreduce.Job:  map 100% reduce 100%
-    2025-12-18 09:28:56,408 INFO mapreduce.Job: Job job_1766048350482_0003 completed successfully
-    2025-12-18 09:28:56,540 INFO mapreduce.Job: Counters: 54
+    rmdir: `/processed/country_gdp/': No such file or directory
+    2026-01-03 17:05:29,484 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+    packageJobJar: [pr0404/ejercicio1/mapper-gdp.py, pr0404/ejercicio1/reducer-gdp.py, /tmp/hadoop-unjar2151474530583080221/] [] /tmp/streamjob4063019973025700489.jar tmpDir=null
+    2026-01-03 17:05:29,894 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.2:8032
+    2026-01-03 17:05:29,966 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.2:8032
+    2026-01-03 17:05:30,161 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1767459908050_0001
+    2026-01-03 17:05:30,547 INFO mapred.FileInputFormat: Total input files to process : 1
+    2026-01-03 17:05:30,640 INFO mapreduce.JobSubmitter: number of splits:2
+    2026-01-03 17:05:30,744 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1767459908050_0001
+    2026-01-03 17:05:30,744 INFO mapreduce.JobSubmitter: Executing with tokens: []
+    2026-01-03 17:05:30,884 INFO conf.Configuration: resource-types.xml not found
+    2026-01-03 17:05:30,885 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+    2026-01-03 17:05:31,242 INFO impl.YarnClientImpl: Submitted application application_1767459908050_0001
+    2026-01-03 17:05:31,265 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1767459908050_0001/
+    2026-01-03 17:05:31,266 INFO mapreduce.Job: Running job: job_1767459908050_0001
+    2026-01-03 17:05:36,340 INFO mapreduce.Job: Job job_1767459908050_0001 running in uber mode : false
+    2026-01-03 17:05:36,341 INFO mapreduce.Job:  map 0% reduce 0%
+    2026-01-03 17:05:40,386 INFO mapreduce.Job:  map 100% reduce 0%
+    2026-01-03 17:05:45,435 INFO mapreduce.Job:  map 100% reduce 100%
+    2026-01-03 17:05:45,451 INFO mapreduce.Job: Job job_1767459908050_0001 completed successfully
+    2026-01-03 17:05:45,498 INFO mapreduce.Job: Counters: 54
     	File System Counters
     		FILE: Number of bytes read=172022
     		FILE: Number of bytes written=1286592
@@ -10097,14 +10094,14 @@ for line in sys.stdin:
     		Launched map tasks=2
     		Launched reduce tasks=1
     		Data-local map tasks=2
-    		Total time spent by all maps in occupied slots (ms)=7688
-    		Total time spent by all reduces in occupied slots (ms)=4385
-    		Total time spent by all map tasks (ms)=7688
-    		Total time spent by all reduce tasks (ms)=4385
-    		Total vcore-milliseconds taken by all map tasks=7688
-    		Total vcore-milliseconds taken by all reduce tasks=4385
-    		Total megabyte-milliseconds taken by all map tasks=7872512
-    		Total megabyte-milliseconds taken by all reduce tasks=4490240
+    		Total time spent by all maps in occupied slots (ms)=2854
+    		Total time spent by all reduces in occupied slots (ms)=2559
+    		Total time spent by all map tasks (ms)=2854
+    		Total time spent by all reduce tasks (ms)=2559
+    		Total vcore-milliseconds taken by all map tasks=2854
+    		Total vcore-milliseconds taken by all reduce tasks=2559
+    		Total megabyte-milliseconds taken by all map tasks=2922496
+    		Total megabyte-milliseconds taken by all reduce tasks=2620416
     	Map-Reduce Framework
     		Map input records=13761
     		Map output records=4982
@@ -10121,15 +10118,15 @@ for line in sys.stdin:
     		Shuffled Maps =2
     		Failed Shuffles=0
     		Merged Map outputs=2
-    		GC time elapsed (ms)=404
-    		CPU time spent (ms)=6210
-    		Physical memory (bytes) snapshot=1014976512
-    		Virtual memory (bytes) snapshot=7855104000
-    		Total committed heap usage (bytes)=1336934400
-    		Peak Map Physical memory (bytes)=323698688
-    		Peak Map Virtual memory (bytes)=2615844864
-    		Peak Reduce Physical memory (bytes)=368820224
-    		Peak Reduce Virtual memory (bytes)=2625695744
+    		GC time elapsed (ms)=173
+    		CPU time spent (ms)=2020
+    		Physical memory (bytes) snapshot=1013329920
+    		Virtual memory (bytes) snapshot=7850569728
+    		Total committed heap usage (bytes)=1331167232
+    		Peak Map Physical memory (bytes)=328388608
+    		Peak Map Virtual memory (bytes)=2615730176
+    		Peak Reduce Physical memory (bytes)=359981056
+    		Peak Reduce Virtual memory (bytes)=2622218240
     	Shuffle Errors
     		BAD_ID=0
     		CONNECTION=0
@@ -10141,7 +10138,7 @@ for line in sys.stdin:
     		Bytes Read=1663033
     	File Output Format Counters 
     		Bytes Written=172016
-    2025-12-18 09:28:56,540 INFO streaming.StreamJob: Output directory: /processed/country_gdp
+    2026-01-03 17:05:45,498 INFO streaming.StreamJob: Output directory: /processed/country_gdp
     AFGHANISTAN	2023	17233051620.1117
     	
     AFGHANISTAN	2000	3521418059.92345
@@ -20158,7 +20155,7 @@ print("\n".join(buffer))
     
 ```
 
-    Writing pr0404/ejercicio2/reducer.py
+    Overwriting pr0404/ejercicio2/reducer.py
 
 
 
@@ -20189,26 +20186,26 @@ print("\n".join(buffer))
 
     rm: `/processed/region_gdp/*': No such file or directory
     rmdir: `/processed/region_gdp/': No such file or directory
-    2025-12-18 09:40:23,588 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
-    packageJobJar: [pr0404/ejercicio2/mapper.py, pr0404/ejercicio2/reducer.py, /tmp/hadoop-unjar5004364127867558141/] [] /tmp/streamjob6736221488560556774.jar tmpDir=null
-    2025-12-18 09:40:25,312 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.5:8032
-    2025-12-18 09:40:25,580 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.5:8032
-    2025-12-18 09:40:26,080 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1766048350482_0004
-    2025-12-18 09:40:26,807 INFO mapred.FileInputFormat: Total input files to process : 1
-    2025-12-18 09:40:27,042 INFO mapreduce.JobSubmitter: number of splits:2
-    2025-12-18 09:40:27,291 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1766048350482_0004
-    2025-12-18 09:40:27,291 INFO mapreduce.JobSubmitter: Executing with tokens: []
-    2025-12-18 09:40:27,574 INFO conf.Configuration: resource-types.xml not found
-    2025-12-18 09:40:27,575 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
-    2025-12-18 09:40:27,699 INFO impl.YarnClientImpl: Submitted application application_1766048350482_0004
-    2025-12-18 09:40:27,762 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1766048350482_0004/
-    2025-12-18 09:40:27,765 INFO mapreduce.Job: Running job: job_1766048350482_0004
-    2025-12-18 09:40:36,984 INFO mapreduce.Job: Job job_1766048350482_0004 running in uber mode : false
-    2025-12-18 09:40:36,987 INFO mapreduce.Job:  map 0% reduce 0%
-    2025-12-18 09:40:44,136 INFO mapreduce.Job:  map 100% reduce 0%
-    2025-12-18 09:40:50,223 INFO mapreduce.Job:  map 100% reduce 100%
-    2025-12-18 09:40:51,263 INFO mapreduce.Job: Job job_1766048350482_0004 completed successfully
-    2025-12-18 09:40:51,374 INFO mapreduce.Job: Counters: 54
+    2026-01-03 17:05:50,435 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+    packageJobJar: [pr0404/ejercicio2/mapper.py, pr0404/ejercicio2/reducer.py, /tmp/hadoop-unjar6025463536936223442/] [] /tmp/streamjob6499227992948653174.jar tmpDir=null
+    2026-01-03 17:05:50,933 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.2:8032
+    2026-01-03 17:05:51,025 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.2:8032
+    2026-01-03 17:05:51,194 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1767459908050_0002
+    2026-01-03 17:05:51,485 INFO mapred.FileInputFormat: Total input files to process : 1
+    2026-01-03 17:05:51,571 INFO mapreduce.JobSubmitter: number of splits:2
+    2026-01-03 17:05:51,661 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1767459908050_0002
+    2026-01-03 17:05:51,661 INFO mapreduce.JobSubmitter: Executing with tokens: []
+    2026-01-03 17:05:51,791 INFO conf.Configuration: resource-types.xml not found
+    2026-01-03 17:05:51,791 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+    2026-01-03 17:05:51,838 INFO impl.YarnClientImpl: Submitted application application_1767459908050_0002
+    2026-01-03 17:05:51,864 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1767459908050_0002/
+    2026-01-03 17:05:51,865 INFO mapreduce.Job: Running job: job_1767459908050_0002
+    2026-01-03 17:05:56,939 INFO mapreduce.Job: Job job_1767459908050_0002 running in uber mode : false
+    2026-01-03 17:05:56,940 INFO mapreduce.Job:  map 0% reduce 0%
+    2026-01-03 17:05:59,978 INFO mapreduce.Job:  map 100% reduce 0%
+    2026-01-03 17:06:05,016 INFO mapreduce.Job:  map 100% reduce 100%
+    2026-01-03 17:06:05,029 INFO mapreduce.Job: Job job_1767459908050_0002 completed successfully
+    2026-01-03 17:06:05,076 INFO mapreduce.Job: Counters: 54
     	File System Counters
     		FILE: Number of bytes read=320587
     		FILE: Number of bytes written=1583626
@@ -20225,14 +20222,14 @@ print("\n".join(buffer))
     		Launched map tasks=2
     		Launched reduce tasks=1
     		Data-local map tasks=2
-    		Total time spent by all maps in occupied slots (ms)=8813
-    		Total time spent by all reduces in occupied slots (ms)=4152
-    		Total time spent by all map tasks (ms)=8813
-    		Total time spent by all reduce tasks (ms)=4152
-    		Total vcore-milliseconds taken by all map tasks=8813
-    		Total vcore-milliseconds taken by all reduce tasks=4152
-    		Total megabyte-milliseconds taken by all map tasks=9024512
-    		Total megabyte-milliseconds taken by all reduce tasks=4251648
+    		Total time spent by all maps in occupied slots (ms)=3081
+    		Total time spent by all reduces in occupied slots (ms)=2399
+    		Total time spent by all map tasks (ms)=3081
+    		Total time spent by all reduce tasks (ms)=2399
+    		Total vcore-milliseconds taken by all map tasks=3081
+    		Total vcore-milliseconds taken by all reduce tasks=2399
+    		Total megabyte-milliseconds taken by all map tasks=3154944
+    		Total megabyte-milliseconds taken by all reduce tasks=2456576
     	Map-Reduce Framework
     		Map input records=13761
     		Map output records=13759
@@ -20249,15 +20246,15 @@ print("\n".join(buffer))
     		Shuffled Maps =2
     		Failed Shuffles=0
     		Merged Map outputs=2
-    		GC time elapsed (ms)=516
-    		CPU time spent (ms)=5880
-    		Physical memory (bytes) snapshot=1002336256
-    		Virtual memory (bytes) snapshot=7846232064
-    		Total committed heap usage (bytes)=1333264384
-    		Peak Map Physical memory (bytes)=320774144
-    		Peak Map Virtual memory (bytes)=2614083584
-    		Peak Reduce Physical memory (bytes)=361336832
-    		Peak Reduce Virtual memory (bytes)=2619744256
+    		GC time elapsed (ms)=177
+    		CPU time spent (ms)=2160
+    		Physical memory (bytes) snapshot=997601280
+    		Virtual memory (bytes) snapshot=7843328000
+    		Total committed heap usage (bytes)=1331167232
+    		Peak Map Physical memory (bytes)=321462272
+    		Peak Map Virtual memory (bytes)=2613858304
+    		Peak Reduce Physical memory (bytes)=359120896
+    		Peak Reduce Virtual memory (bytes)=2616631296
     	Shuffle Errors
     		BAD_ID=0
     		CONNECTION=0
@@ -20269,7 +20266,7 @@ print("\n".join(buffer))
     		Bytes Read=1663033
     	File Output Format Counters 
     		Bytes Written=100
-    2025-12-18 09:40:51,375 INFO streaming.StreamJob: Output directory: /processed/region_gdp
+    2026-01-03 17:06:05,076 INFO streaming.StreamJob: Output directory: /processed/region_gdp
     AFRICA	60187281517661.49
     AMERICAS	736355543214066.8
     ASIA	658903712885772.4
@@ -20573,26 +20570,26 @@ print("\n".join(buffer))
 
     rm: `/processed/country_max/*': No such file or directory
     rmdir: `/processed/country_max/': No such file or directory
-    2025-12-18 09:51:48,752 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
-    packageJobJar: [pr0404/ejercicio3/mapper.py, pr0404/ejercicio3/reducer.py, /tmp/hadoop-unjar6743312656658264312/] [] /tmp/streamjob4924808858893607978.jar tmpDir=null
-    2025-12-18 09:51:49,887 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.5:8032
-    2025-12-18 09:51:50,062 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.5:8032
-    2025-12-18 09:51:50,398 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1766048350482_0005
-    2025-12-18 09:51:51,009 INFO mapred.FileInputFormat: Total input files to process : 1
-    2025-12-18 09:51:51,161 INFO mapreduce.JobSubmitter: number of splits:2
-    2025-12-18 09:51:51,359 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1766048350482_0005
-    2025-12-18 09:51:51,359 INFO mapreduce.JobSubmitter: Executing with tokens: []
-    2025-12-18 09:51:51,665 INFO conf.Configuration: resource-types.xml not found
-    2025-12-18 09:51:51,666 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
-    2025-12-18 09:51:51,774 INFO impl.YarnClientImpl: Submitted application application_1766048350482_0005
-    2025-12-18 09:51:51,818 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1766048350482_0005/
-    2025-12-18 09:51:51,820 INFO mapreduce.Job: Running job: job_1766048350482_0005
-    2025-12-18 09:51:59,012 INFO mapreduce.Job: Job job_1766048350482_0005 running in uber mode : false
-    2025-12-18 09:51:59,013 INFO mapreduce.Job:  map 0% reduce 0%
-    2025-12-18 09:52:05,157 INFO mapreduce.Job:  map 100% reduce 0%
-    2025-12-18 09:52:11,234 INFO mapreduce.Job:  map 100% reduce 100%
-    2025-12-18 09:52:11,248 INFO mapreduce.Job: Job job_1766048350482_0005 completed successfully
-    2025-12-18 09:52:11,338 INFO mapreduce.Job: Counters: 54
+    2026-01-03 17:06:10,034 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+    packageJobJar: [pr0404/ejercicio3/mapper.py, pr0404/ejercicio3/reducer.py, /tmp/hadoop-unjar7331302771516912125/] [] /tmp/streamjob2772235510439994134.jar tmpDir=null
+    2026-01-03 17:06:10,477 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.2:8032
+    2026-01-03 17:06:10,556 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.2:8032
+    2026-01-03 17:06:10,743 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1767459908050_0003
+    2026-01-03 17:06:11,041 INFO mapred.FileInputFormat: Total input files to process : 1
+    2026-01-03 17:06:11,124 INFO mapreduce.JobSubmitter: number of splits:2
+    2026-01-03 17:06:11,215 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1767459908050_0003
+    2026-01-03 17:06:11,215 INFO mapreduce.JobSubmitter: Executing with tokens: []
+    2026-01-03 17:06:11,335 INFO conf.Configuration: resource-types.xml not found
+    2026-01-03 17:06:11,336 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+    2026-01-03 17:06:11,376 INFO impl.YarnClientImpl: Submitted application application_1767459908050_0003
+    2026-01-03 17:06:11,397 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1767459908050_0003/
+    2026-01-03 17:06:11,398 INFO mapreduce.Job: Running job: job_1767459908050_0003
+    2026-01-03 17:06:15,468 INFO mapreduce.Job: Job job_1767459908050_0003 running in uber mode : false
+    2026-01-03 17:06:15,468 INFO mapreduce.Job:  map 0% reduce 0%
+    2026-01-03 17:06:19,518 INFO mapreduce.Job:  map 100% reduce 0%
+    2026-01-03 17:06:23,551 INFO mapreduce.Job:  map 100% reduce 100%
+    2026-01-03 17:06:23,562 INFO mapreduce.Job: Job job_1767459908050_0003 completed successfully
+    2026-01-03 17:06:23,610 INFO mapreduce.Job: Counters: 54
     	File System Counters
     		FILE: Number of bytes read=451633
     		FILE: Number of bytes written=1845721
@@ -20609,14 +20606,14 @@ print("\n".join(buffer))
     		Launched map tasks=2
     		Launched reduce tasks=1
     		Data-local map tasks=2
-    		Total time spent by all maps in occupied slots (ms)=6854
-    		Total time spent by all reduces in occupied slots (ms)=3943
-    		Total time spent by all map tasks (ms)=6854
-    		Total time spent by all reduce tasks (ms)=3943
-    		Total vcore-milliseconds taken by all map tasks=6854
-    		Total vcore-milliseconds taken by all reduce tasks=3943
-    		Total megabyte-milliseconds taken by all map tasks=7018496
-    		Total megabyte-milliseconds taken by all reduce tasks=4037632
+    		Total time spent by all maps in occupied slots (ms)=3251
+    		Total time spent by all reduces in occupied slots (ms)=1397
+    		Total time spent by all map tasks (ms)=3251
+    		Total time spent by all reduce tasks (ms)=1397
+    		Total vcore-milliseconds taken by all map tasks=3251
+    		Total vcore-milliseconds taken by all reduce tasks=1397
+    		Total megabyte-milliseconds taken by all map tasks=3329024
+    		Total megabyte-milliseconds taken by all reduce tasks=1430528
     	Map-Reduce Framework
     		Map input records=13761
     		Map output records=13759
@@ -20633,15 +20630,15 @@ print("\n".join(buffer))
     		Shuffled Maps =2
     		Failed Shuffles=0
     		Merged Map outputs=2
-    		GC time elapsed (ms)=323
-    		CPU time spent (ms)=5110
-    		Physical memory (bytes) snapshot=1002237952
-    		Virtual memory (bytes) snapshot=7851073536
-    		Total committed heap usage (bytes)=1333264384
-    		Peak Map Physical memory (bytes)=321040384
-    		Peak Map Virtual memory (bytes)=2614599680
-    		Peak Reduce Physical memory (bytes)=364089344
-    		Peak Reduce Virtual memory (bytes)=2622435328
+    		GC time elapsed (ms)=167
+    		CPU time spent (ms)=2060
+    		Physical memory (bytes) snapshot=999387136
+    		Virtual memory (bytes) snapshot=7848775680
+    		Total committed heap usage (bytes)=1346371584
+    		Peak Map Physical memory (bytes)=322342912
+    		Peak Map Virtual memory (bytes)=2613989376
+    		Peak Reduce Physical memory (bytes)=354967552
+    		Peak Reduce Virtual memory (bytes)=2621677568
     	Shuffle Errors
     		BAD_ID=0
     		CONNECTION=0
@@ -20653,7 +20650,7 @@ print("\n".join(buffer))
     		Bytes Read=1663033
     	File Output Format Counters 
     		Bytes Written=3502
-    2025-12-18 09:52:11,338 INFO streaming.StreamJob: Output directory: /processed/country_max
+    2026-01-03 17:06:23,610 INFO streaming.StreamJob: Output directory: /processed/country_max
     AFGHANISTAN	2002
     ALBANIA	1995
     ALGERIA	1963
@@ -20868,4 +20865,1046 @@ print("\n".join(buffer))
     VIRGIN ISLANDS (U.S.)	2007
     YEMEN	1992
     ZAMBIA	1965
+
+
+## Ejercicio 4: Join (Reduce-Side Join)
+
+
+```python
+!hdfs dfs -put ./pr0404/all.csv /gdp
+!hdfs dfs -put ./pr0404/world.csv /gdp
+```
+
+
+```python
+%%writefile pr0404/ejercicio4/mapper.py
+#!/usr/bin/env python3
+import sys
+buffer = []
+MAX_LENGTH = 50000
+YEAR = 2023
+
+first_names = True
+first_gdp = True
+def country_code(info, buffer_rec):
+    buffer_rec.append(f"{info[2].decode('utf-8')}\t{info[3].decode('utf-8')}")
+def country_gdp(info, buffer_rec):
+    info = info.split(b";")
+    try:
+        year = int(info[-4].decode('utf-8'))
+        if year != YEAR:
+            return
+        buffer_rec.append(f"{info[0].decode('utf-8').lower()}\t{info[-3].decode('utf-8')}")
+    except IndexError:
+        return
+for line in sys.stdin.buffer:
+    info = line.strip().split(b",") 
+    if len(info) == 4:
+        if first_names:
+            first_names = False
+            continue
+        country_code(info, buffer)
+    else:
+        if first_gdp:
+            first_gdp = False
+            continue
+        country_gdp(line, buffer)
+    if len(buffer) > 50000:
+        "\n".join(buffer)
+        buffer = []
+if len(buffer) > 0:
+    print("\n".join(buffer))
+```
+
+    Overwriting pr0404/ejercicio4/mapper.py
+
+
+
+```python
+%%writefile pr0404/ejercicio4/reducer.py
+#!/usr/bin/env python3
+import sys
+
+buffer = []
+current_code = None
+current_country = None
+current_gdp = None
+
+for line in sys.stdin.buffer:
+    info = line.strip().split(b"\t")
+    country_code = info[0].decode('utf-8')
+    gdp = None
+    country = None
+    if country_code != current_code:
+        if current_code and current_country:
+            buffer.append(f"{current_country}\t{current_gdp}")
+        current_code = country_code
+        current_country = None
+        current_gdp = None
+    try:
+        current_gdp = float(info[1].decode('utf-8'))
+    except ValueError:
+        current_country = info[1].decode('utf-8')
+
+buffer.append(f"{current_country}\t{current_gdp}")
+print("\n".join(buffer))
+
+```
+
+    Overwriting pr0404/ejercicio4/reducer.py
+
+
+
+```python
+!cat pr0404/countries_gdp_hist.csv pr0404/world.csv | python3 pr0404/ejercicio4/mapper.py | sort | python3 pr0404/ejercicio4/reducer.py
+```
+
+    Aruba	3648573136.15155
+    Afganistán	17233051620.1117
+    Angola	84824654481.7249
+    Anguila	None
+    Åland	None
+    Albania	23547179830.4413
+    Andorra	3785067331.7625
+    "Emiratos Árabes Unidos"	514130432653.081
+    Argentina	646075277525.125
+    Armenia	24085749592.3359
+    "Samoa Americana"	0.0
+    Antártida	None
+    "Tierras Australes y Antárticas Francesas"	None
+    "Antigua y Barbuda"	2033085185.18518
+    Australia	1728057316695.61
+    Austria	511685203845.001
+    Azerbaiyán	72356176470.5882
+    Burundi	2642161668.85211
+    Bélgica	644782756682.756
+    Benín	19676049075.7011
+    "Burkina Faso"	20324617844.5265
+    Bangladés	437415331040.994
+    Bulgaria	102407653020.606
+    Baréin	46079867021.2766
+    Bahamas	14338500000.0
+    "Bosnia y Herzegovina"	27514782476.0406
+    "San Bartolomé"	None
+    Bielorrusia	71857382745.6066
+    Belice	3066850000.0
+    Bermudas	8141700000.0
+    Bolivia	45135398008.8166
+    Brasil	2173665655937.27
+    Barbados	6720733200.0
+    Brunéi	15128292980.8638
+    Bután	0.0
+    "Isla Bouvet"	None
+    Botsuana	19396084498.0084
+    "República Centroafricana"	2555492085.24831
+    Canadá	2142470914401.36
+    "Islas Cocos"	None
+    Suiza	884940402230.409
+    Chile	335533331669.219
+    China	17794783039552.0
+    "Costa de Marfil"	78875489245.0538
+    Camerún	49279410982.826
+    "República Democrática del Congo"	66383287002.9867
+    "República del Congo"	15321055822.5167
+    "Islas Cook"	None
+    Colombia	363493841244.303
+    Comoras	1352380971.24055
+    "Cabo Verde"	2533819406.4916
+    "Costa Rica"	86497941439.0174
+    Cuba	0.0
+    Curazao	3281419347.37053
+    "Isla de Navidad"	None
+    "Islas Caimán"	7139428557.71423
+    Chipre	33886930712.3394
+    "República Checa"	343207874553.734
+    Alemania	4525703903627.53
+    Yibuti	4098530513.55777
+    Dominica	653992592.592593
+    Dinamarca	407091920305.404
+    "República Dominicana"	121444279313.931
+    Argelia	247626161016.414
+    Ecuador	118844826000.0
+    Egipto	396002496996.96
+    Eritrea	0.0
+    "República Árabe Saharaui Democrática"	None
+    España	1620090734956.89
+    Estonia	41291245222.1948
+    Etiopía	163697927593.982
+    Finlandia	295532341254.907
+    Fiyi	5442046565.04719
+    "Islas Malvinas"	None
+    Francia	3051831611384.76
+    "Islas Feroe"	3907323961.33964
+    Micronesia	460000000.0
+    Gabón	19388402541.6698
+    "Reino Unido"	3380854520809.54
+    Georgia	30777833585.4441
+    Guernsey	None
+    Ghana	76370396722.154
+    Gibraltar	0.0
+    Guinea	22199409741.2578
+    Guadalupe	None
+    Gambia	2396111021.64149
+    Guinea-Bisáu	2048348108.35852
+    "Guinea Ecuatorial"	12337550583.754
+    Grecia	243498333237.802
+    Granada	1316733333.33333
+    Groenlandia	0.0
+    Guatemala	104450210572.012
+    "Guayana Francesa"	None
+    Guam	0.0
+    Guyana	17159509565.4676
+    "Hong Kong"	380812234827.832
+    "Islas Heard y McDonald"	None
+    Honduras	34400509852.0436
+    Croacia	84393795502.4421
+    Haití	19850829757.5418
+    Hungría	212388906458.724
+    Indonesia	1371171152331.16
+    "Isla de Man"	0.0
+    India	3567551674623.01
+    "Territorio Británico del Océano Índico"	None
+    Irlanda	551394889339.778
+    Irán	404625655204.619
+    Irak	250842782139.464
+    Islandia	31325116556.3807
+    Israel	513611100815.691
+    Italia	2300941152991.81
+    Jamaica	19423355409.2316
+    Jersey	None
+    Jordania	50967475352.1127
+    Japón	4204494802431.55
+    Kazajistán	262641892078.524
+    Kenia	108038588970.595
+    Kirguistán	13987627908.8381
+    Camboya	42335646895.7984
+    Kiribati	279208903.337644
+    "San Cristóbal y Nieves"	1055499777.77778
+    "Corea del Sur"	1712792854202.37
+    Kuwait	163704878875.85
+    Laos	15843155731.2552
+    Líbano	0.0
+    Liberia	4240000000.0
+    Libia	45096462972.4014
+    "Santa Lucía"	2430148148.14815
+    Liechtenstein	0.0
+    "Sri Lanka"	84356863743.6335
+    Lesoto	2117962450.79469
+    Lituania	79789877416.1681
+    Luxemburgo	85755006123.5976
+    Letonia	42247850064.5125
+    Macao	45803067940.4072
+    "San Martín"	0.0
+    Marruecos	144417103249.646
+    Mónaco	9995350547.12166
+    Moldavia	16539436547.295
+    Madagascar	15790113246.7478
+    Maldivas	6590894301.9579
+    México	1789114434843.46
+    "Islas Marshall"	259300000.0
+    "Macedonia del Norte"	15763621848.115
+    Mali	20661794596.0873
+    Malta	22328640241.5553
+    Birmania	66757619000.0
+    Montenegro	7530593375.22034
+    Mongolia	20325121393.9074
+    "Islas Marianas del Norte"	0.0
+    Mozambique	20954220983.5473
+    Mauritania	10651709411.4594
+    Montserrat	None
+    Martinica	None
+    Mauricio	14644524819.0054
+    Malaui	12712150082.0792
+    Malasia	399705169318.477
+    Mayotte	None
+    Namibia	12351025066.9131
+    "Nueva Caledonia"	0.0
+    Níger	16819170420.5653
+    "Isla Norfolk"	None
+    Nigeria	363846332834.618
+    Nicaragua	17829218219.3591
+    Niue	None
+    "Países Bajos"	1154361305398.06
+    Noruega	485310823603.662
+    Nepal	40908073366.8455
+    Nauru	154170289.321861
+    "Nueva Zelanda"	252175506110.168
+    Omán	108810923276.983
+    Pakistán	337912301397.727
+    Panamá	83318176900.0
+    "Islas Pitcairn"	None
+    Perú	267603248655.253
+    Filipinas	437146372729.942
+    Palaos	281849062.5
+    "Papúa Nueva Guinea"	30729242919.4411
+    Polonia	809200697797.088
+    "Puerto Rico"	117902300000.0
+    "Corea del Norte"	0.0
+    Portugal	289114289663.542
+    Paraguay	42956263543.9482
+    Palestina	17420800000.0
+    "Polinesia Francesa"	0.0
+    Catar	213002809330.267
+    Reunión	None
+    Rumania	350775856415.189
+    Rusia	2021421476035.42
+    Ruanda	14097768472.1883
+    "Arabia Saudita"	1067582933333.33
+    Sudán	109265503110.904
+    Senegal	30848333083.7055
+    Singapur	501427500080.059
+    "Islas Georgias del Sur y Sandwich del Sur"	None
+    "Svalbard y Jan Mayen"	None
+    "Islas Salomón"	1633319401.19414
+    "Sierra Leona"	6411869546.28929
+    "El Salvador"	34015620000.0
+    "San Marino"	0.0
+    Somalia	10968517090.0004
+    "San Pedro y Miquelón"	None
+    Serbia	81342660752.3732
+    "Sudán del Sur"	0.0
+    "Santo Tomé y Príncipe"	678976264.835436
+    Surinam	3455146280.83975
+    Eslovaquia	132908336234.295
+    Eslovenia	69148468417.3208
+    Suecia	584960475767.32
+    Suazilandia	4442875788.08505
+    "San Martín"	1627776949.27374
+    Seychelles	2141450171.13932
+    Siria	0.0
+    "Islas Turcas y Caicos"	1402054390.94734
+    Chad	13149325362.3347
+    Togo	9171261837.57103
+    Tailandia	514968699239.005
+    Tayikistán	12060602008.8478
+    Tokelau	None
+    Turkmenistán	60628857142.8571
+    "Timor Oriental"	2079916900.0
+    Tonga	0.0
+    "Trinidad y Tobago"	27372285697.9477
+    Túnez	48529595416.6533
+    Turquía	1118252964260.77
+    Tuvalu	62280311.5852172
+    "Taiwán (República de China)"	None
+    Tanzania	79062403820.892
+    Uganda	48768955863.3175
+    Ucrania	178757021965.008
+    "Islas Ultramarinas Menores de los Estados Unidos"	None
+    Uruguay	77240830877.4597
+    "Estados Unidos"	27720709000000.0
+    Uzbekistán	101591769702.343
+    "San Vicente y las Granadinas"	1065962962.96296
+    Venezuela	0.0
+    "Islas Vírgenes Británicas"	0.0
+    "Islas Vírgenes de los Estados Unidos"	0.0
+    Vietnam	429716969043.572
+    Vanuatu	1126313359.21923
+    "Wallis y Futuna"	None
+    Samoa	938189443.830393
+    Yemen	0.0
+    Sudáfrica	380699271814.508
+    Zambia	27577956471.244
+    Zimbabue	35231367885.8554
+
+
+
+```python
+!hdfs dfs -rm /processed/country_spanish/*
+!hdfs dfs -rmdir /processed/country_spanish/
+!mapred streaming \
+     -files pr0404/ejercicio4/mapper.py,pr0404/ejercicio4/reducer.py \
+     -input /gdp/countries_gdp_hist.csv \
+     -input /gdp/world.csv \
+     -output /processed/country_spanish \
+     -mapper mapper.py \
+     -reducer reducer.py
+!hdfs dfs -cat /processed/country_spanish/part-00000
+```
+
+    Deleted /processed/country_spanish/_SUCCESS
+    Deleted /processed/country_spanish/part-00000
+    packageJobJar: [] [/usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.4.0.jar] /tmp/streamjob2433576572439106227.jar tmpDir=null
+    2026-01-07 17:38:27,131 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.4:8032
+    2026-01-07 17:38:27,216 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.4:8032
+    2026-01-07 17:38:27,377 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1767800998533_0005
+    2026-01-07 17:38:27,693 INFO mapred.FileInputFormat: Total input files to process : 2
+    2026-01-07 17:38:27,780 INFO mapreduce.JobSubmitter: number of splits:3
+    2026-01-07 17:38:27,874 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1767800998533_0005
+    2026-01-07 17:38:27,874 INFO mapreduce.JobSubmitter: Executing with tokens: []
+    2026-01-07 17:38:28,007 INFO conf.Configuration: resource-types.xml not found
+    2026-01-07 17:38:28,008 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+    2026-01-07 17:38:28,048 INFO impl.YarnClientImpl: Submitted application application_1767800998533_0005
+    2026-01-07 17:38:28,068 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1767800998533_0005/
+    2026-01-07 17:38:28,069 INFO mapreduce.Job: Running job: job_1767800998533_0005
+    2026-01-07 17:38:32,166 INFO mapreduce.Job: Job job_1767800998533_0005 running in uber mode : false
+    2026-01-07 17:38:32,167 INFO mapreduce.Job:  map 0% reduce 0%
+    2026-01-07 17:38:36,250 INFO mapreduce.Job:  map 100% reduce 0%
+    2026-01-07 17:38:41,291 INFO mapreduce.Job:  map 100% reduce 100%
+    2026-01-07 17:38:41,306 INFO mapreduce.Job: Job job_1767800998533_0005 completed successfully
+    2026-01-07 17:38:41,363 INFO mapreduce.Job: Counters: 55
+    	File System Counters
+    		FILE: Number of bytes read=8980
+    		FILE: Number of bytes written=1274805
+    		FILE: Number of read operations=0
+    		FILE: Number of large read operations=0
+    		FILE: Number of write operations=0
+    		HDFS: Number of bytes read=1669067
+    		HDFS: Number of bytes written=6363
+    		HDFS: Number of read operations=14
+    		HDFS: Number of large read operations=0
+    		HDFS: Number of write operations=2
+    		HDFS: Number of bytes read erasure-coded=0
+    	Job Counters 
+    		Killed map tasks=1
+    		Launched map tasks=3
+    		Launched reduce tasks=1
+    		Data-local map tasks=3
+    		Total time spent by all maps in occupied slots (ms)=4828
+    		Total time spent by all reduces in occupied slots (ms)=2609
+    		Total time spent by all map tasks (ms)=4828
+    		Total time spent by all reduce tasks (ms)=2609
+    		Total vcore-milliseconds taken by all map tasks=4828
+    		Total vcore-milliseconds taken by all reduce tasks=2609
+    		Total megabyte-milliseconds taken by all map tasks=4943872
+    		Total megabyte-milliseconds taken by all reduce tasks=2671616
+    	Map-Reduce Framework
+    		Map input records=14011
+    		Map output records=461
+    		Map output bytes=8052
+    		Map output materialized bytes=8992
+    		Input split bytes=284
+    		Combine input records=0
+    		Combine output records=0
+    		Reduce input groups=246
+    		Reduce shuffle bytes=8992
+    		Reduce input records=461
+    		Reduce output records=246
+    		Spilled Records=922
+    		Shuffled Maps =3
+    		Failed Shuffles=0
+    		Merged Map outputs=3
+    		GC time elapsed (ms)=235
+    		CPU time spent (ms)=1930
+    		Physical memory (bytes) snapshot=1375494144
+    		Virtual memory (bytes) snapshot=10460856320
+    		Total committed heap usage (bytes)=1657798656
+    		Peak Map Physical memory (bytes)=384282624
+    		Peak Map Virtual memory (bytes)=2616999936
+    		Peak Reduce Physical memory (bytes)=348581888
+    		Peak Reduce Virtual memory (bytes)=2619588608
+    	Shuffle Errors
+    		BAD_ID=0
+    		CONNECTION=0
+    		IO_ERROR=0
+    		WRONG_LENGTH=0
+    		WRONG_MAP=0
+    		WRONG_REDUCE=0
+    	File Input Format Counters 
+    		Bytes Read=1668783
+    	File Output Format Counters 
+    		Bytes Written=6363
+    2026-01-07 17:38:41,363 INFO streaming.StreamJob: Output directory: /processed/country_spanish
+    Aruba	3648573136.15155
+    Afganistán	17233051620.1117
+    Angola	84824654481.7249
+    Anguila	None
+    Åland	None
+    Albania	23547179830.4413
+    Andorra	3785067331.7625
+    "Emiratos Árabes Unidos"	514130432653.081
+    Argentina	646075277525.125
+    Armenia	24085749592.3359
+    "Samoa Americana"	0.0
+    Antártida	None
+    "Tierras Australes y Antárticas Francesas"	None
+    "Antigua y Barbuda"	2033085185.18518
+    Australia	1728057316695.61
+    Austria	511685203845.001
+    Azerbaiyán	72356176470.5882
+    Burundi	2642161668.85211
+    Bélgica	644782756682.756
+    Benín	19676049075.7011
+    "Burkina Faso"	20324617844.5265
+    Bangladés	437415331040.994
+    Bulgaria	102407653020.606
+    Baréin	46079867021.2766
+    Bahamas	14338500000.0
+    "Bosnia y Herzegovina"	27514782476.0406
+    "San Bartolomé"	None
+    Bielorrusia	71857382745.6066
+    Belice	3066850000.0
+    Bermudas	8141700000.0
+    Bolivia	45135398008.8166
+    Brasil	2173665655937.27
+    Barbados	6720733200.0
+    Brunéi	15128292980.8638
+    Bután	0.0
+    "Isla Bouvet"	None
+    Botsuana	19396084498.0084
+    "República Centroafricana"	2555492085.24831
+    Canadá	2142470914401.36
+    "Islas Cocos"	None
+    Suiza	884940402230.409
+    Chile	335533331669.219
+    China	17794783039552.0
+    "Costa de Marfil"	78875489245.0538
+    Camerún	49279410982.826
+    "República Democrática del Congo"	66383287002.9867
+    "República del Congo"	15321055822.5167
+    "Islas Cook"	None
+    Colombia	363493841244.303
+    Comoras	1352380971.24055
+    "Cabo Verde"	2533819406.4916
+    "Costa Rica"	86497941439.0174
+    Cuba	0.0
+    Curazao	3281419347.37053
+    "Isla de Navidad"	None
+    "Islas Caimán"	7139428557.71423
+    Chipre	33886930712.3394
+    "República Checa"	343207874553.734
+    Alemania	4525703903627.53
+    Yibuti	4098530513.55777
+    Dominica	653992592.592593
+    Dinamarca	407091920305.404
+    "República Dominicana"	121444279313.931
+    Argelia	247626161016.414
+    Ecuador	118844826000.0
+    Egipto	396002496996.96
+    Eritrea	0.0
+    "República Árabe Saharaui Democrática"	None
+    España	1620090734956.89
+    Estonia	41291245222.1948
+    Etiopía	163697927593.982
+    Finlandia	295532341254.907
+    Fiyi	5442046565.04719
+    "Islas Malvinas"	None
+    Francia	3051831611384.76
+    "Islas Feroe"	3907323961.33964
+    Micronesia	460000000.0
+    Gabón	19388402541.6698
+    "Reino Unido"	3380854520809.54
+    Georgia	30777833585.4441
+    Guernsey	None
+    Ghana	76370396722.154
+    Gibraltar	0.0
+    Guinea	22199409741.2578
+    Guadalupe	None
+    Gambia	2396111021.64149
+    Guinea-Bisáu	2048348108.35852
+    "Guinea Ecuatorial"	12337550583.754
+    Grecia	243498333237.802
+    Granada	1316733333.33333
+    Groenlandia	0.0
+    Guatemala	104450210572.012
+    "Guayana Francesa"	None
+    Guam	0.0
+    Guyana	17159509565.4676
+    "Hong Kong"	380812234827.832
+    "Islas Heard y McDonald"	None
+    Honduras	34400509852.0436
+    Croacia	84393795502.4421
+    Haití	19850829757.5418
+    Hungría	212388906458.724
+    Indonesia	1371171152331.16
+    "Isla de Man"	0.0
+    India	3567551674623.01
+    "Territorio Británico del Océano Índico"	None
+    Irlanda	551394889339.778
+    Irán	404625655204.619
+    Irak	250842782139.464
+    Islandia	31325116556.3807
+    Israel	513611100815.691
+    Italia	2300941152991.81
+    Jamaica	19423355409.2316
+    Jersey	None
+    Jordania	50967475352.1127
+    Japón	4204494802431.55
+    Kazajistán	262641892078.524
+    Kenia	108038588970.595
+    Kirguistán	13987627908.8381
+    Camboya	42335646895.7984
+    Kiribati	279208903.337644
+    "San Cristóbal y Nieves"	1055499777.77778
+    "Corea del Sur"	1712792854202.37
+    Kuwait	163704878875.85
+    Laos	15843155731.2552
+    Líbano	0.0
+    Liberia	4240000000.0
+    Libia	45096462972.4014
+    "Santa Lucía"	2430148148.14815
+    Liechtenstein	0.0
+    "Sri Lanka"	84356863743.6335
+    Lesoto	2117962450.79469
+    Lituania	79789877416.1681
+    Luxemburgo	85755006123.5976
+    Letonia	42247850064.5125
+    Macao	45803067940.4072
+    "San Martín"	0.0
+    Marruecos	144417103249.646
+    Mónaco	9995350547.12166
+    Moldavia	16539436547.295
+    Madagascar	15790113246.7478
+    Maldivas	6590894301.9579
+    México	1789114434843.46
+    "Islas Marshall"	259300000.0
+    "Macedonia del Norte"	15763621848.115
+    Mali	20661794596.0873
+    Malta	22328640241.5553
+    Birmania	66757619000.0
+    Montenegro	7530593375.22034
+    Mongolia	20325121393.9074
+    "Islas Marianas del Norte"	0.0
+    Mozambique	20954220983.5473
+    Mauritania	10651709411.4594
+    Montserrat	None
+    Martinica	None
+    Mauricio	14644524819.0054
+    Malaui	12712150082.0792
+    Malasia	399705169318.477
+    Mayotte	None
+    Namibia	12351025066.9131
+    "Nueva Caledonia"	0.0
+    Níger	16819170420.5653
+    "Isla Norfolk"	None
+    Nigeria	363846332834.618
+    Nicaragua	17829218219.3591
+    Niue	None
+    "Países Bajos"	1154361305398.06
+    Noruega	485310823603.662
+    Nepal	40908073366.8455
+    Nauru	154170289.321861
+    "Nueva Zelanda"	252175506110.168
+    Omán	108810923276.983
+    Pakistán	337912301397.727
+    Panamá	83318176900.0
+    "Islas Pitcairn"	None
+    Perú	267603248655.253
+    Filipinas	437146372729.942
+    Palaos	281849062.5
+    "Papúa Nueva Guinea"	30729242919.4411
+    Polonia	809200697797.088
+    "Puerto Rico"	117902300000.0
+    "Corea del Norte"	0.0
+    Portugal	289114289663.542
+    Paraguay	42956263543.9482
+    Palestina	17420800000.0
+    "Polinesia Francesa"	0.0
+    Catar	213002809330.267
+    Reunión	None
+    Rumania	350775856415.189
+    Rusia	2021421476035.42
+    Ruanda	14097768472.1883
+    "Arabia Saudita"	1067582933333.33
+    Sudán	109265503110.904
+    Senegal	30848333083.7055
+    Singapur	501427500080.059
+    "Islas Georgias del Sur y Sandwich del Sur"	None
+    "Svalbard y Jan Mayen"	None
+    "Islas Salomón"	1633319401.19414
+    "Sierra Leona"	6411869546.28929
+    "El Salvador"	34015620000.0
+    "San Marino"	0.0
+    Somalia	10968517090.0004
+    "San Pedro y Miquelón"	None
+    Serbia	81342660752.3732
+    "Sudán del Sur"	0.0
+    "Santo Tomé y Príncipe"	678976264.835436
+    Surinam	3455146280.83975
+    Eslovaquia	132908336234.295
+    Eslovenia	69148468417.3208
+    Suecia	584960475767.32
+    Suazilandia	4442875788.08505
+    "San Martín"	1627776949.27374
+    Seychelles	2141450171.13932
+    Siria	0.0
+    "Islas Turcas y Caicos"	1402054390.94734
+    Chad	13149325362.3347
+    Togo	9171261837.57103
+    Tailandia	514968699239.005
+    Tayikistán	12060602008.8478
+    Tokelau	None
+    Turkmenistán	60628857142.8571
+    "Timor Oriental"	2079916900.0
+    Tonga	0.0
+    "Trinidad y Tobago"	27372285697.9477
+    Túnez	48529595416.6533
+    Turquía	1118252964260.77
+    Tuvalu	62280311.5852172
+    "Taiwán (República de China)"	None
+    Tanzania	79062403820.892
+    Uganda	48768955863.3175
+    Ucrania	178757021965.008
+    "Islas Ultramarinas Menores de los Estados Unidos"	None
+    Uruguay	77240830877.4597
+    "Estados Unidos"	27720709000000.0
+    Uzbekistán	101591769702.343
+    "San Vicente y las Granadinas"	1065962962.96296
+    Venezuela	0.0
+    "Islas Vírgenes Británicas"	0.0
+    "Islas Vírgenes de los Estados Unidos"	0.0
+    Vietnam	429716969043.572
+    Vanuatu	1126313359.21923
+    "Wallis y Futuna"	None
+    Samoa	938189443.830393
+    Yemen	0.0
+    Sudáfrica	380699271814.508
+    Zambia	27577956471.244
+    Zimbabue	35231367885.8554
+
+
+## Ejercicio 5: Distribución de Riqueza (Binning pattern)
+
+
+```python
+%%writefile pr0404/ejercicio5/mapper.py
+#!/usr/bin/env python3
+import sys
+
+MEDIUM_THRESHOLD = 10_000
+BIG_THRESHOLD = 1_000_000
+SMALL = "SMALL"
+MEDIUM = "MEDIUM"
+BIG = "BIG"
+current_country = None
+latest_gdp = None
+buffer = []
+BUFFER_LIMIT = 50000
+
+first = True
+for line in sys.stdin.buffer:
+    if first:
+        first = False
+        continue
+    info = line.strip().split(b";")
+    country = info[0].decode('utf-8')
+    if country != current_country:
+        if current_country != None:
+            if latest_gdp < MEDIUM_THRESHOLD:
+                buffer.append(f"{SMALL}\t{1}")
+            elif MEDIUM_THRESHOLD < latest_gdp and latest_gdp < BIG_THRESHOLD:
+                buffer.append(f"{MEDIUM}\t{1}")
+            else:
+                buffer.append(f"{BIG}\t{1}")
+            if len(buffer) > BUFFER_LIMIT:
+                print("\n".join(buffer))
+                buffer = []
+        current_country = country
+    latest_gdp = float(info[-2].decode('utf-8'))
+
+if len(buffer) > 0:
+    print("\n".join(buffer))
+```
+
+    Overwriting pr0404/ejercicio5/mapper.py
+
+
+
+```python
+%%writefile pr0404/ejercicio5/reducer.py
+#!/usr/bin/env python3
+import sys
+
+SMALL = "SMALL"
+MEDIUM = "MEDIUM"
+BIG = "BIG"
+
+small_count = 0
+medium_count = 0
+big_count = 0
+
+for line in sys.stdin.buffer:
+    info = line.strip().split(b"\t")
+    category = info[0].decode('utf-8')
+    if category == SMALL:
+        small_count += 1
+    elif category == MEDIUM:
+        medium_count += 1
+    else:
+        big_count += 1
+print(f"{SMALL}\t{small_count}")
+print(f"{MEDIUM}\t{medium_count}")
+print(f"{BIG}\t{big_count}")
+
+
+```
+
+    Overwriting pr0404/ejercicio5/reducer.py
+
+
+
+```python
+!cat pr0404/countries_gdp_hist.csv | python3 pr0404/ejercicio5/mapper.py | sort | python3 pr0404/ejercicio5/reducer.py
+```
+
+    SMALL	68
+    MEDIUM	127
+    BIG	19
+
+
+
+```python
+!hdfs dfs -rm /processed/binning/*
+!hdfs dfs -rmdir /processed/binning/
+!mapred streaming \
+     -files pr0404/ejercicio5/mapper.py,pr0404/ejercicio5/reducer.py \
+     -input /gdp/countries_gdp_hist.csv \
+     -output /processed/binning \
+     -mapper mapper.py \
+     -reducer reducer.py
+!hdfs dfs -cat /processed/binning/part-00000
+```
+
+    rm: `/processed/binning/*': No such file or directory
+    packageJobJar: [] [/usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.4.0.jar] /tmp/streamjob4378220944049201493.jar tmpDir=null
+    2026-01-07 18:05:15,945 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.4:8032
+    2026-01-07 18:05:16,034 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.4:8032
+    2026-01-07 18:05:16,226 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1767800998533_0010
+    2026-01-07 18:05:16,539 INFO mapred.FileInputFormat: Total input files to process : 1
+    2026-01-07 18:05:16,624 INFO mapreduce.JobSubmitter: number of splits:2
+    2026-01-07 18:05:16,705 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1767800998533_0010
+    2026-01-07 18:05:16,705 INFO mapreduce.JobSubmitter: Executing with tokens: []
+    2026-01-07 18:05:16,851 INFO conf.Configuration: resource-types.xml not found
+    2026-01-07 18:05:16,852 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+    2026-01-07 18:05:16,911 INFO impl.YarnClientImpl: Submitted application application_1767800998533_0010
+    2026-01-07 18:05:16,943 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1767800998533_0010/
+    2026-01-07 18:05:16,944 INFO mapreduce.Job: Running job: job_1767800998533_0010
+    2026-01-07 18:05:21,014 INFO mapreduce.Job: Job job_1767800998533_0010 running in uber mode : false
+    2026-01-07 18:05:21,015 INFO mapreduce.Job:  map 0% reduce 0%
+    2026-01-07 18:05:25,067 INFO mapreduce.Job:  map 100% reduce 0%
+    2026-01-07 18:05:29,098 INFO mapreduce.Job:  map 100% reduce 100%
+    2026-01-07 18:05:29,109 INFO mapreduce.Job: Job job_1767800998533_0010 completed successfully
+    2026-01-07 18:05:29,171 INFO mapreduce.Job: Counters: 54
+    	File System Counters
+    		FILE: Number of bytes read=2235
+    		FILE: Number of bytes written=946958
+    		FILE: Number of read operations=0
+    		FILE: Number of large read operations=0
+    		FILE: Number of write operations=0
+    		HDFS: Number of bytes read=1663231
+    		HDFS: Number of bytes written=27
+    		HDFS: Number of read operations=11
+    		HDFS: Number of large read operations=0
+    		HDFS: Number of write operations=2
+    		HDFS: Number of bytes read erasure-coded=0
+    	Job Counters 
+    		Launched map tasks=2
+    		Launched reduce tasks=1
+    		Data-local map tasks=2
+    		Total time spent by all maps in occupied slots (ms)=3053
+    		Total time spent by all reduces in occupied slots (ms)=1542
+    		Total time spent by all map tasks (ms)=3053
+    		Total time spent by all reduce tasks (ms)=1542
+    		Total vcore-milliseconds taken by all map tasks=3053
+    		Total vcore-milliseconds taken by all reduce tasks=1542
+    		Total megabyte-milliseconds taken by all map tasks=3126272
+    		Total megabyte-milliseconds taken by all reduce tasks=1579008
+    	Map-Reduce Framework
+    		Map input records=13761
+    		Map output records=214
+    		Map output bytes=1801
+    		Map output materialized bytes=2241
+    		Input split bytes=198
+    		Combine input records=0
+    		Combine output records=0
+    		Reduce input groups=3
+    		Reduce shuffle bytes=2241
+    		Reduce input records=214
+    		Reduce output records=3
+    		Spilled Records=428
+    		Shuffled Maps =2
+    		Failed Shuffles=0
+    		Merged Map outputs=2
+    		GC time elapsed (ms)=176
+    		CPU time spent (ms)=1650
+    		Physical memory (bytes) snapshot=991428608
+    		Virtual memory (bytes) snapshot=7843987456
+    		Total committed heap usage (bytes)=1332215808
+    		Peak Map Physical memory (bytes)=322334720
+    		Peak Map Virtual memory (bytes)=2613100544
+    		Peak Reduce Physical memory (bytes)=347389952
+    		Peak Reduce Virtual memory (bytes)=2618302464
+    	Shuffle Errors
+    		BAD_ID=0
+    		CONNECTION=0
+    		IO_ERROR=0
+    		WRONG_LENGTH=0
+    		WRONG_MAP=0
+    		WRONG_REDUCE=0
+    	File Input Format Counters 
+    		Bytes Read=1663033
+    	File Output Format Counters 
+    		Bytes Written=27
+    2026-01-07 18:05:29,171 INFO streaming.StreamJob: Output directory: /processed/binning
+    SMALL	68
+    MEDIUM	127
+    BIG	19
+
+
+## Ejercicio 6: Índice invertido de países (Inverted Index Pattern)
+
+
+```python
+%%writefile pr0404/ejercicio6/mapper.py
+#!/usr/bin/env python3
+import sys
+
+EARNINGS_THRESHOLD = 5000
+BIG = "BIG EARNINGS"
+SMALL = "SMALL EARNINGS"
+buffer = []
+
+for line in sys.stdin.buffer:
+    line = line.strip()
+    if len(line) <= 0:
+        continue
+    line = line.split(b";")
+    if line[0].decode('utf-8') == "country_code":
+        continue
+    try:
+        name = line[4].decode('utf-8')
+        group = line[-5].decode('utf-8')
+        buffer.append(f"{group}\t{name}") 
+    except (ValueError, IndexError):
+        continue
+if len(buffer) > 0:
+    print("\n".join(buffer))
+```
+
+    Overwriting pr0404/ejercicio6/mapper.py
+
+
+
+```python
+%%writefile pr0404/ejercicio6/reducer.py
+#!/usr/bin/env python3
+import sys
+
+current_earnings = None
+current_countries = set()
+buffer = []
+for line in sys.stdin.buffer:
+    line = line.strip().split(b"\t")
+    if line[0] != current_earnings:
+        if current_earnings:
+            buffer.append(f"{current_earnings.decode('utf-8')}\t({', '.join(current_countries)})")
+        current_earnings = line[0]
+        current_countries = set()
+    current_countries.add(line[1].decode("utf-8"))
+print("\n".join(buffer))
+
+```
+
+    Overwriting pr0404/ejercicio6/reducer.py
+
+
+
+```python
+!cat pr0404/countries_gdp_hist.csv | python3 pr0404/ejercicio6/mapper.py | sort | python3 pr0404/ejercicio6/reducer.py
+```
+
+    INGRESO ALTO	(CHILE, BRUNEI DARUSSALAM, AMERICAN SAMOA, PUERTO RICO, ROMANIA, SLOVENIA, PALAU, MONACO, VIRGIN ISLANDS (BRITISH), ESTONIA, SEYCHELLES, ICELAND, BARBADOS, FRENCH POLYNESIA, SAINT KITTS AND NEVIS, POLAND, GUAM, ARUBA, FRANCE, URUGUAY, FINLAND, UNITED ARAB EMIRATES, AUSTRALIA, RUSSIAN FEDERATION, LIECHTENSTEIN, NORWAY, QATAR, PORTUGAL, UNITED STATES OF AMERICA, PANAMA, TRINIDAD AND TOBAGO, SAN MARINO, IRELAND, LATVIA, AUSTRIA, LITHUANIA, GREENLAND, HONG KONG, CURAÇAO, BULGARIA, SINGAPORE, CYPRUS, BAHAMAS, OMAN, CROATIA, ANTIGUA AND BARBUDA, SLOVAKIA, JAPAN, GERMANY, VIRGIN ISLANDS (U.S.), CZECHIA, ANDORRA, KUWAIT, BAHRAIN, GREECE, NETHERLANDS, SINT MAARTEN (DUTCH PART), NAURU, GIBRALTAR, HUNGARY, GUYANA, CAYMAN ISLANDS, MALTA, ITALY, SWEDEN, NEW CALEDONIA, SWITZERLAND, TURKS AND CAICOS ISLANDS, SPAIN, BELGIUM, MACAO, SAINT MARTIN (FRENCH PART), ISLE OF MAN, SAUDI ARABIA, NORTHERN MARIANA ISLANDS, ISRAEL, DENMARK, FAROE ISLANDS, UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND, NEW ZEALAND, BERMUDA, CANADA, KOREA, REPUBLIC OF, LUXEMBOURG)
+    INGRESO MEDIANO ALTO	(AZERBAIJAN, INDONESIA, IRAQ, ECUADOR, BELIZE, BELARUS, UKRAINE, MARSHALL ISLANDS, GEORGIA, GUATEMALA, SAINT LUCIA, NORTH MACEDONIA, PERU, TURKEY, ARMENIA, EQUATORIAL GUINEA, ALGERIA, FIJI, KAZAKHSTAN, GABON, SURINAME, TONGA, BOSNIA AND HERZEGOVINA, ARGENTINA, NAMIBIA, TURKMENISTAN, MONTENEGRO, DOMINICAN REPUBLIC, THAILAND, BOTSWANA, MEXICO, MONGOLIA, BRAZIL, SAINT VINCENT AND THE GRENADINES, JAMAICA, MALDIVES, CHINA, SERBIA, EL SALVADOR, COLOMBIA, PARAGUAY, SOUTH AFRICA, TUVALU, GRENADA, MALAYSIA, LIBYA, DOMINICA, MAURITIUS, COSTA RICA, CUBA, IRAN (ISLAMIC REPUBLIC OF), MOLDOVA, REPUBLIC OF, ALBANIA)
+    NO CLASIFICADO	(VENEZUELA (BOLIVARIAN REPUBLIC OF))
+    PAÍSES DE INGRESO BAJO	(KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF), MALI, YEMEN, MALAWI, MOZAMBIQUE, SIERRA LEONE, CONGO, DEMOCRATIC REPUBLIC OF THE, GUINEA-BISSAU, CENTRAL AFRICAN REPUBLIC, TOGO, SYRIAN ARAB REPUBLIC, MADAGASCAR, GAMBIA, CHAD, BURKINA FASO, SOMALIA, SUDAN, UGANDA, BURUNDI, ETHIOPIA, LIBERIA, SOUTH SUDAN, NIGER, ERITREA, AFGHANISTAN, RWANDA)
+
+
+
+```python
+!hdfs dfs -rm /processed/reversed_index/*
+!hdfs dfs -rmdir /processed/reversed_index/
+!mapred streaming \
+     -files pr0404/ejercicio6/mapper.py,pr0404/ejercicio6/reducer.py \
+     -input /gdp/countries_gdp_hist.csv \
+     -output /processed/reversed_index \
+     -mapper mapper.py \
+     -reducer reducer.py
+!hdfs dfs -cat /processed/reversed_index/part-00000
+```
+
+    rm: `/processed/reversed_index/*': No such file or directory
+    rmdir: `/processed/reversed_index/': No such file or directory
+    packageJobJar: [] [/usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.4.0.jar] /tmp/streamjob1599895919851728833.jar tmpDir=null
+    2026-01-07 18:27:22,041 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.4:8032
+    2026-01-07 18:27:22,110 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at yarnmanager/172.19.0.4:8032
+    2026-01-07 18:27:22,289 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1767800998533_0011
+    2026-01-07 18:27:22,550 INFO mapred.FileInputFormat: Total input files to process : 1
+    2026-01-07 18:27:22,611 INFO mapreduce.JobSubmitter: number of splits:2
+    2026-01-07 18:27:22,688 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1767800998533_0011
+    2026-01-07 18:27:22,688 INFO mapreduce.JobSubmitter: Executing with tokens: []
+    2026-01-07 18:27:22,812 INFO conf.Configuration: resource-types.xml not found
+    2026-01-07 18:27:22,812 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+    2026-01-07 18:27:22,856 INFO impl.YarnClientImpl: Submitted application application_1767800998533_0011
+    2026-01-07 18:27:22,877 INFO mapreduce.Job: The url to track the job: http://yarnmanager:8088/proxy/application_1767800998533_0011/
+    2026-01-07 18:27:22,877 INFO mapreduce.Job: Running job: job_1767800998533_0011
+    2026-01-07 18:27:26,938 INFO mapreduce.Job: Job job_1767800998533_0011 running in uber mode : false
+    2026-01-07 18:27:26,938 INFO mapreduce.Job:  map 0% reduce 0%
+    2026-01-07 18:27:30,982 INFO mapreduce.Job:  map 100% reduce 0%
+    2026-01-07 18:27:34,005 INFO mapreduce.Job:  map 100% reduce 100%
+    2026-01-07 18:27:35,030 INFO mapreduce.Job: Job job_1767800998533_0011 completed successfully
+    2026-01-07 18:27:35,077 INFO mapreduce.Job: Counters: 54
+    	File System Counters
+    		FILE: Number of bytes read=470214
+    		FILE: Number of bytes written=1882937
+    		FILE: Number of read operations=0
+    		FILE: Number of large read operations=0
+    		FILE: Number of write operations=0
+    		HDFS: Number of bytes read=1663231
+    		HDFS: Number of bytes written=2112
+    		HDFS: Number of read operations=11
+    		HDFS: Number of large read operations=0
+    		HDFS: Number of write operations=2
+    		HDFS: Number of bytes read erasure-coded=0
+    	Job Counters 
+    		Launched map tasks=2
+    		Launched reduce tasks=1
+    		Data-local map tasks=2
+    		Total time spent by all maps in occupied slots (ms)=3108
+    		Total time spent by all reduces in occupied slots (ms)=1430
+    		Total time spent by all map tasks (ms)=3108
+    		Total time spent by all reduce tasks (ms)=1430
+    		Total vcore-milliseconds taken by all map tasks=3108
+    		Total vcore-milliseconds taken by all reduce tasks=1430
+    		Total megabyte-milliseconds taken by all map tasks=3182592
+    		Total megabyte-milliseconds taken by all reduce tasks=1464320
+    	Map-Reduce Framework
+    		Map input records=13761
+    		Map output records=13760
+    		Map output bytes=442688
+    		Map output materialized bytes=470220
+    		Input split bytes=198
+    		Combine input records=0
+    		Combine output records=0
+    		Reduce input groups=5
+    		Reduce shuffle bytes=470220
+    		Reduce input records=13760
+    		Reduce output records=4
+    		Spilled Records=27520
+    		Shuffled Maps =2
+    		Failed Shuffles=0
+    		Merged Map outputs=2
+    		GC time elapsed (ms)=168
+    		CPU time spent (ms)=2160
+    		Physical memory (bytes) snapshot=982540288
+    		Virtual memory (bytes) snapshot=7849897984
+    		Total committed heap usage (bytes)=1351614464
+    		Peak Map Physical memory (bytes)=313643008
+    		Peak Map Virtual memory (bytes)=2615926784
+    		Peak Reduce Physical memory (bytes)=355749888
+    		Peak Reduce Virtual memory (bytes)=2619293696
+    	Shuffle Errors
+    		BAD_ID=0
+    		CONNECTION=0
+    		IO_ERROR=0
+    		WRONG_LENGTH=0
+    		WRONG_MAP=0
+    		WRONG_REDUCE=0
+    	File Input Format Counters 
+    		Bytes Read=1663033
+    	File Output Format Counters 
+    		Bytes Written=2112
+    2026-01-07 18:27:35,077 INFO streaming.StreamJob: Output directory: /processed/reversed_index
+    INGRESO ALTO	(NETHERLANDS, MALTA, CROATIA, CZECHIA, ISRAEL, BELGIUM, CAYMAN ISLANDS, FRENCH POLYNESIA, IRELAND, AMERICAN SAMOA, LITHUANIA, UNITED STATES OF AMERICA, SINT MAARTEN (DUTCH PART), NEW ZEALAND, NORWAY, LUXEMBOURG, CANADA, QATAR, ICELAND, GUYANA, AUSTRIA, ESTONIA, KOREA, REPUBLIC OF, NORTHERN MARIANA ISLANDS, BAHAMAS, RUSSIAN FEDERATION, SPAIN, SAN MARINO, MONACO, URUGUAY, GREENLAND, POLAND, VIRGIN ISLANDS (U.S.), PALAU, ARUBA, TRINIDAD AND TOBAGO, BERMUDA, ROMANIA, BRUNEI DARUSSALAM, ANTIGUA AND BARBUDA, SAINT MARTIN (FRENCH PART), DENMARK, NAURU, FRANCE, LIECHTENSTEIN, PUERTO RICO, SAINT KITTS AND NEVIS, SLOVENIA, SLOVAKIA, NEW CALEDONIA, SEYCHELLES, CURAÇAO, UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND, BULGARIA, GERMANY, GUAM, GIBRALTAR, SINGAPORE, ISLE OF MAN, PORTUGAL, HUNGARY, ITALY, BAHRAIN, LATVIA, TURKS AND CAICOS ISLANDS, FAROE ISLANDS, HONG KONG, MACAO, CYPRUS, FINLAND, SAUDI ARABIA, OMAN, UNITED ARAB EMIRATES, VIRGIN ISLANDS (BRITISH), ANDORRA, SWITZERLAND, JAPAN, PANAMA, AUSTRALIA, KUWAIT, GREECE, CHILE, BARBADOS, SWEDEN)
+    INGRESO MEDIANO ALTO	(COLOMBIA, BELIZE, GEORGIA, GUATEMALA, BOSNIA AND HERZEGOVINA, CUBA, GABON, DOMINICA, AZERBAIJAN, THAILAND, COSTA RICA, EL SALVADOR, CHINA, TUVALU, SAINT LUCIA, INDONESIA, NORTH MACEDONIA, BOTSWANA, GRENADA, JAMAICA, MONTENEGRO, PERU, KAZAKHSTAN, TURKMENISTAN, ALGERIA, SAINT VINCENT AND THE GRENADINES, DOMINICAN REPUBLIC, BELARUS, NAMIBIA, MARSHALL ISLANDS, LIBYA, BRAZIL, SOUTH AFRICA, SERBIA, IRAQ, MALDIVES, MAURITIUS, ARGENTINA, TONGA, IRAN (ISLAMIC REPUBLIC OF), MEXICO, UKRAINE, FIJI, MALAYSIA, ALBANIA, EQUATORIAL GUINEA, MOLDOVA, REPUBLIC OF, ARMENIA, PARAGUAY, SURINAME, MONGOLIA, TURKEY, ECUADOR)
+    NO CLASIFICADO	(VENEZUELA (BOLIVARIAN REPUBLIC OF))
+    PAÍSES DE INGRESO BAJO	(BURUNDI, MALI, GAMBIA, CHAD, SUDAN, TOGO, MADAGASCAR, GUINEA-BISSAU, ERITREA, SOMALIA, RWANDA, ETHIOPIA, UGANDA, AFGHANISTAN, SIERRA LEONE, KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF), SYRIAN ARAB REPUBLIC, CENTRAL AFRICAN REPUBLIC, YEMEN, NIGER, BURKINA FASO, MOZAMBIQUE, CONGO, DEMOCRATIC REPUBLIC OF THE, MALAWI, SOUTH SUDAN, LIBERIA)
 
