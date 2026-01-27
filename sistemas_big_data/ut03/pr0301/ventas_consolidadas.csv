@@ -1,0 +1,251 @@
+Fecha_Venta,Nom_Producto,Cantidad_Vendida,Precio_Unit,region
+2023-02-21 00:00:00,Laptop,4,423,Norte
+2023-01-15 00:00:00,Laptop,2,171,Norte
+2023-03-13 00:00:00,Laptop,3,73,Norte
+2023-03-02 00:00:00,Teclado,1,139,Norte
+2023-01-21 00:00:00,Monitor,4,692,Norte
+2023-03-24 00:00:00,Monitor,1,939,Norte
+2023-03-28 00:00:00,Laptop,1,647,Norte
+2023-03-16 00:00:00,Monitor,3,606,Norte
+2023-03-16 00:00:00,Monitor,2,644,Norte
+2023-03-29 00:00:00,Laptop,2,987,Norte
+2023-01-24 00:00:00,Monitor,1,439,Norte
+2023-01-03 00:00:00,Webcam,4,441,Norte
+2023-01-22 00:00:00,Mouse,2,123,Norte
+2023-02-22 00:00:00,Mouse,4,871,Norte
+2023-01-02 00:00:00,Laptop,2,273,Norte
+2023-03-29 00:00:00,Teclado,4,246,Norte
+2023-01-30 00:00:00,Laptop,3,131,Norte
+2023-02-07 00:00:00,Teclado,4,529,Norte
+2023-01-02 00:00:00,Mouse,3,492,Norte
+2023-03-05 00:00:00,Laptop,3,118,Norte
+2023-03-01 00:00:00,Webcam,4,172,Norte
+2023-01-21 00:00:00,Monitor,3,880,Norte
+2023-02-02 00:00:00,Teclado,1,933,Norte
+2023-03-17 00:00:00,Monitor,3,915,Norte
+2023-02-27 00:00:00,Monitor,2,897,Norte
+2023-01-22 00:00:00,Laptop,4,357,Norte
+2023-03-30 00:00:00,Monitor,1,725,Norte
+2023-02-18 00:00:00,Webcam,4,841,Norte
+2023-02-28 00:00:00,Monitor,2,182,Norte
+2023-02-11 00:00:00,Laptop,2,739,Norte
+2023-03-01 00:00:00,Webcam,2,976,Norte
+2023-03-21 00:00:00,Mouse,3,700,Norte
+2023-01-15 00:00:00,Monitor,3,180,Norte
+2023-03-03 00:00:00,Laptop,4,599,Norte
+2023-03-03 00:00:00,Mouse,4,820,Norte
+2023-02-16 00:00:00,Mouse,1,417,Norte
+2023-03-03 00:00:00,Teclado,1,296,Norte
+2023-02-20 00:00:00,Webcam,4,835,Norte
+2023-02-24 00:00:00,Monitor,3,935,Norte
+2023-03-05 00:00:00,Laptop,2,523,Norte
+2023-01-03 00:00:00,Teclado,4,915,Norte
+2023-02-20 00:00:00,Webcam,1,411,Norte
+2023-01-07 00:00:00,Teclado,3,154,Norte
+2023-01-21 00:00:00,Webcam,4,214,Norte
+2023-03-14 00:00:00,Webcam,4,420,Norte
+2023-02-08 00:00:00,Monitor,3,659,Norte
+2023-01-18 00:00:00,Webcam,4,52,Norte
+2023-01-04 00:00:00,Teclado,3,707,Norte
+2023-03-30 00:00:00,Webcam,2,479,Norte
+2023-03-01 00:00:00,Monitor,3,974,Norte
+2023-01-14 00:00:00,Monitor,3,902,Norte
+2023-01-09 00:00:00,Teclado,3,489,Norte
+2023-03-31 00:00:00,Mouse,4,394,Norte
+2023-02-22 00:00:00,Mouse,4,41,Norte
+2023-01-02 00:00:00,Webcam,3,769,Norte
+2023-03-25 00:00:00,Laptop,4,689,Norte
+2023-03-01 00:00:00,Webcam,1,57,Norte
+2023-03-12 00:00:00,Teclado,1,249,Norte
+2023-02-13 00:00:00,Teclado,4,384,Norte
+2023-01-08 00:00:00,Teclado,4,582,Norte
+2023-02-16 00:00:00,Teclado,3,457,Norte
+2023-02-04 00:00:00,Teclado,2,795,Norte
+2023-03-19 00:00:00,Monitor,4,302,Norte
+2023-03-22 00:00:00,Mouse,1,46,Norte
+2023-02-05 00:00:00,Teclado,3,245,Norte
+2023-02-19 00:00:00,Laptop,4,296,Norte
+2023-01-04 00:00:00,Laptop,1,817,Norte
+2023-01-02 00:00:00,Laptop,1,628,Norte
+2023-01-06 00:00:00,Laptop,2,303,Norte
+2023-02-23 00:00:00,Monitor,3,898,Norte
+2023-01-04 00:00:00,Laptop,3,979,Norte
+2023-02-23 00:00:00,Teclado,2,500,Norte
+2023-03-04 00:00:00,Webcam,2,472,Norte
+2023-01-18 00:00:00,Laptop,3,848,Norte
+2023-03-31 00:00:00,Monitor,3,835,Norte
+2023-02-13 00:00:00,Monitor,4,678,Norte
+2023-02-03 00:00:00,Laptop,4,535,Norte
+2023-03-15 00:00:00,Webcam,2,566,Norte
+2023-03-03 00:00:00,Laptop,4,211,Norte
+2023-01-14 00:00:00,Monitor,1,68,Norte
+2023-02-17 00:00:00,Mouse,4,531,Norte
+2023-01-15 00:00:00,Teclado,4,36,Norte
+2023-03-13 00:00:00,Monitor,1,191,Norte
+2023-03-19 00:00:00,Laptop,2,239,Norte
+2023-03-28 00:00:00,Teclado,1,177,Norte
+2023-03-03 00:00:00,Laptop,4,496,Norte
+2023-02-09 00:00:00,Laptop,2,65,Norte
+2023-03-26 00:00:00,Mouse,4,392,Norte
+2023-03-21 00:00:00,Teclado,1,537,Norte
+2023-03-23 00:00:00,Teclado,1,118,Norte
+2023-02-22 00:00:00,Mouse,4,911,Norte
+2023-01-24 00:00:00,Monitor,3,764,Norte
+2023-01-26 00:00:00,Laptop,3,56,Norte
+2023-03-30 00:00:00,Webcam,1,299,Norte
+2023-03-01 00:00:00,Laptop,1,368,Norte
+2023-02-10 00:00:00,Laptop,3,516,Norte
+2023-01-29 00:00:00,Monitor,3,321,Norte
+2023-01-15 00:00:00,Laptop,4,200,Norte
+2023-02-14 00:00:00,Mouse,4,626,Norte
+2023-03-06 00:00:00,Mouse,3,118,Norte
+2023-03-01 00:00:00,Monitor,6,624,Sur
+2023-03-04 00:00:00,Laptop,7,941,Sur
+2023-03-26 00:00:00,Mouse,3,989,Sur
+2023-02-01 00:00:00,Webcam,3,621,Sur
+2023-03-28 00:00:00,Mouse,5,437,Sur
+2023-02-02 00:00:00,Mouse,6,134,Sur
+2023-03-08 00:00:00,Laptop,9,636,Sur
+2023-01-18 00:00:00,Teclado,5,922,Sur
+2023-01-25 00:00:00,Mouse,1,215,Sur
+2023-02-23 00:00:00,Monitor,4,845,Sur
+2023-02-27 00:00:00,Teclado,5,520,Sur
+2023-03-08 00:00:00,Webcam,5,645,Sur
+2023-02-15 00:00:00,Laptop,7,512,Sur
+2023-01-24 00:00:00,Webcam,4,94,Sur
+2023-02-01 00:00:00,Teclado,1,432,Sur
+2023-02-16 00:00:00,Teclado,5,395,Sur
+2023-03-27 00:00:00,Teclado,7,439,Sur
+2023-01-23 00:00:00,Webcam,6,748,Sur
+2023-03-07 00:00:00,Teclado,5,296,Sur
+2023-01-27 00:00:00,Webcam,4,780,Sur
+2023-01-02 00:00:00,Teclado,2,695,Sur
+2023-03-31 00:00:00,Monitor,4,413,Sur
+2023-01-17 00:00:00,Teclado,3,888,Sur
+2023-02-02 00:00:00,Webcam,1,476,Sur
+2023-01-09 00:00:00,Mouse,8,939,Sur
+2023-02-12 00:00:00,Teclado,5,211,Sur
+2023-02-17 00:00:00,Mouse,4,758,Sur
+2023-02-08 00:00:00,Monitor,8,708,Sur
+2023-02-11 00:00:00,Laptop,7,118,Sur
+2023-01-26 00:00:00,Monitor,2,567,Sur
+2023-02-19 00:00:00,Teclado,1,997,Sur
+2023-01-25 00:00:00,Mouse,4,115,Sur
+2023-01-24 00:00:00,Mouse,8,683,Sur
+2023-01-13 00:00:00,Webcam,2,682,Sur
+2023-03-01 00:00:00,Mouse,3,209,Sur
+2023-01-07 00:00:00,Webcam,1,755,Sur
+2023-02-26 00:00:00,Laptop,1,56,Sur
+2023-02-05 00:00:00,Teclado,3,799,Sur
+2023-02-14 00:00:00,Webcam,5,388,Sur
+2023-01-20 00:00:00,Laptop,3,714,Sur
+2023-03-06 00:00:00,Mouse,1,544,Sur
+2023-01-08 00:00:00,Mouse,1,298,Sur
+2023-01-16 00:00:00,Laptop,8,236,Sur
+2023-01-14 00:00:00,Mouse,2,886,Sur
+2023-03-17 00:00:00,Laptop,3,892,Sur
+2023-03-28 00:00:00,Webcam,2,817,Sur
+2023-01-15 00:00:00,Webcam,3,292,Sur
+2023-03-07 00:00:00,Laptop,7,900,Sur
+2023-02-01 00:00:00,Webcam,1,81,Sur
+2023-03-28 00:00:00,Webcam,8,615,Sur
+2023-03-09,Monitor,2,244,Este
+2023-01-20,Laptop,2,578,Este
+2023-01-01,Mouse,2,339,Este
+2023-02-07,Webcam,2,158,Este
+2023-03-18,Monitor,1,692,Este
+2023-01-06,Mouse,2,29,Este
+2023-01-05,Mouse,2,917,Este
+2023-01-13,Mouse,2,340,Este
+2023-03-04,Webcam,1,804,Este
+2023-01-09,Monitor,1,939,Este
+2023-02-07,Monitor,2,114,Este
+2023-02-18,Webcam,2,975,Este
+2023-02-19,Webcam,2,478,Este
+2023-01-09,Mouse,2,566,Este
+2023-01-01,Teclado,2,368,Este
+2023-03-13,Monitor,1,248,Este
+2023-01-14,Teclado,2,310,Este
+2023-03-26,Webcam,1,870,Este
+2023-03-19,Mouse,2,151,Este
+2023-03-30,Webcam,2,108,Este
+2023-01-18,Monitor,1,441,Este
+2023-01-23,Laptop,1,164,Este
+2023-03-07,Webcam,2,123,Este
+2023-02-20,Monitor,2,665,Este
+2023-03-08,Monitor,2,573,Este
+2023-03-05,Teclado,1,642,Este
+2023-01-29,Laptop,2,497,Este
+2023-01-27,Teclado,1,569,Este
+2023-02-26,Laptop,1,430,Este
+2023-02-24,Laptop,2,215,Este
+2023-03-27,Mouse,2,536,Este
+2023-03-15,Laptop,2,825,Este
+2023-01-13,Teclado,1,235,Este
+2023-02-21,Webcam,2,280,Este
+2023-01-29,Teclado,2,704,Este
+2023-01-02,Monitor,1,646,Este
+2023-02-05,Teclado,2,830,Este
+2023-01-27,Webcam,2,30,Este
+2023-03-15,Mouse,2,382,Este
+2023-01-12,Mouse,1,635,Este
+2023-03-03,Mouse,1,642,Este
+2023-03-01,Monitor,2,375,Este
+2023-03-09,Webcam,2,824,Este
+2023-03-13,Mouse,1,623,Este
+2023-01-31,Mouse,1,70,Este
+2023-01-29,Laptop,2,798,Este
+2023-01-23,Laptop,2,632,Este
+2023-01-21,Mouse,2,439,Este
+2023-02-23,Laptop,1,850,Este
+2023-02-23,Monitor,2,930,Este
+2023-01-21,Laptop,1,156,Este
+2023-03-15,Teclado,1,136,Este
+2023-01-26,Laptop,1,594,Este
+2023-01-25,Mouse,1,825,Este
+2023-01-02,Mouse,1,437,Este
+2023-01-17,Monitor,1,895,Este
+2023-02-20,Laptop,1,199,Este
+2023-03-11,Webcam,2,180,Este
+2023-02-18,Webcam,1,681,Este
+2023-01-26,Teclado,2,488,Este
+2023-02-18,Laptop,2,380,Este
+2023-02-18,Teclado,2,361,Este
+2023-03-04,Webcam,2,580,Este
+2023-03-12,Laptop,2,160,Este
+2023-03-28,Monitor,1,971,Este
+2023-03-24,Webcam,1,448,Este
+2023-01-30,Monitor,2,788,Este
+2023-03-19,Monitor,1,213,Este
+2023-02-07,Monitor,1,663,Este
+2023-01-01,Webcam,1,890,Este
+2023-01-03,Mouse,2,998,Este
+2023-02-03,Teclado,1,106,Este
+2023-02-24,Teclado,2,197,Este
+2023-01-07,Webcam,2,852,Este
+2023-02-26,Monitor,2,462,Este
+2023-03-13,Laptop,1,248,Este
+2023-03-08,Monitor,1,623,Este
+2023-01-08,Mouse,1,115,Este
+2023-03-29,Monitor,2,471,Este
+2023-02-06,Webcam,2,754,Este
+2023-02-24,Mouse,1,349,Este
+2023-01-07,Laptop,1,104,Este
+2023-01-19,Webcam,1,567,Este
+2023-01-29,Teclado,2,533,Este
+2023-01-01,Webcam,2,542,Este
+2023-01-02,Monitor,1,138,Este
+2023-01-12,Teclado,1,824,Este
+2023-02-07,Laptop,2,72,Este
+2023-02-13,Monitor,2,525,Este
+2023-03-27,Teclado,2,612,Este
+2023-03-15,Monitor,2,746,Este
+2023-03-22,Mouse,1,228,Este
+2023-01-14,Laptop,2,981,Este
+2023-01-25,Laptop,2,297,Este
+2023-01-04,Mouse,2,48,Este
+2023-03-28,Webcam,1,857,Este
+2023-01-18,Webcam,2,375,Este
+2023-02-10,Mouse,1,696,Este
+2023-01-25,Mouse,2,618,Este
+2023-03-27,Webcam,1,844,Este
