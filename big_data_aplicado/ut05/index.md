@@ -5,3 +5,4 @@
 [Limpieza de datos sobre el dataset de cultivos](./notebooks/pr0503/)  
 [Limpieza de datos sobre el dataset de lugares famosos](./notebooks/pr0504/)  
 [Análisis de estadísticas en dataset](./notebooks/pr0505/)  
+[Análisis de comportamiento de usuarios en Netflix](./notebooks/pr0506/)  
