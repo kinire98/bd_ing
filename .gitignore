@@ -3,3 +3,5 @@
 *.mp4
 *.parquet
 *.csv
+*/proyecto-final/**
+proyecto-final
