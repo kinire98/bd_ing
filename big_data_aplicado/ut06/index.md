@@ -1,3 +1,4 @@
-# UT06 Almacenamiento distribuido con s3
+# UT06 Procesamiento en AWS
 
-[Capa bronce en AWS](./pr0601/)
+[Capa bronce en AWS](./pr0601/)  
+[AWS Lambda](./pr0602/)
